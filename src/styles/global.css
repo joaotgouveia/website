@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+      @apply block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none;
+  }
+}
