@@ -1,17 +1,21 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
     theme: {
         extend: {
+           fontFamily: {
+               sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+           },
            colors: {
                "bg-primary": "var(--bg-primary)",
-               "bg-secondary": "var(--bg-secondary)",
-               "bg-accent": "var(--bg-accent)",
                "fg-primary": "var(--fg-primary)",
-               "fg-secondary": "var(--fg-secondary)",
                "fg-accent": "var(--fg-accent)",
+               "fg-dimmed": "var(--fg-dimmed)",
            },
         },
     },
 	plugins: [],
-}
+};

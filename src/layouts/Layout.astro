@@ -7,10 +7,16 @@ import Navbar from '@/components/Navbar.astro';
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <title>joaotgouveia</title>
     </head>
-    <body>
+    <body class="bg-bg-primary text-fg-primary font-sans">
         <Navbar />
-        <slot />
+        <div class="mt-24">
+            <slot />
+        </div>
     </body>
 </html>

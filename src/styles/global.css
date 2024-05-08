@@ -2,10 +2,16 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #0d1b2a;
-  --bg-secondary: #1b263b;
-  --bg-accent: #ee6c4d;
-  --fg-primary: #e0e1dd;
-  --fg-secondary: #e0e1dd;
-  --fg-accent: #17a398;
+  --bg-primary: #131313;
+  --fg-primary: #EEEEEE;
+  --fg-accent: #0CF574;
+  --fg-dimmed: #696969;
+}
+
+nav {
+    backdrop-filter: blur(20px);
+}
+
+.card:hover > .card-read-more {
+    color: var(--fg-accent);
 }

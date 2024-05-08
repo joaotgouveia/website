@@ -8,13 +8,13 @@ const posts: CollectionEntry<'blog'>[] = await getCollection('blog');
 ---
 
 <Layout>
-    <h1>Posts</h1>
-    <div>
+    <div class="flex flex-col flex-nowrap items-center">
+        <div class="w-[33vw] text-4xl font-bold pb-8 underline decoration-fg-accent">Posts</div>
         {posts.map(post => (
         <BlogPostCard
             title={post.data.title}
             description={post.data.description}
-            date={post.data.date.toString()}
+            date={post.data.date.toLocaleDateString('en-us', {year:"numeric", month:"short", day:"numeric"})}
             slug={post.slug}
         />
         ))}
