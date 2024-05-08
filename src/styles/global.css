@@ -1,9 +1,11 @@
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .link {
-      @apply block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none;
-  }
+:root {
+  --bg-primary: #0d1b2a;
+  --bg-secondary: #1b263b;
+  --bg-accent: #ee6c4d;
+  --fg-primary: #e0e1dd;
+  --fg-secondary: #e0e1dd;
+  --fg-accent: #17a398;
 }
