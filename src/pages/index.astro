@@ -4,7 +4,10 @@ import BlogPostCard from '@/components/BlogPostCard.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
-const posts: CollectionEntry<'blog'>[] = await getCollection('blog');
+const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
+    (i: CollectionEntry<"blog">, j: CollectionEntry<"blog">) =>
+        j.data.date.valueOf() - i.data.date.valueOf(),
+);
 ---
 
 <MainLayout>
