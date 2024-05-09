@@ -1,0 +1,17 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+
+type Props = MarkdownLayoutProps<{
+    title: string;
+    description: string;
+    date: string;
+    tags: string[];
+}>;
+
+const { frontmatter } = Astro.props;
+---
+
+<div class="w-1/2">
+    <div class="text-center tracking-wide text-4xl font-bold">{frontmatter.title}</div>
+    <slot />
+</div>
