@@ -1,8 +1,8 @@
 ---
-import MainLayout from '@/layouts/MainLayout.astro';
-import BlogPostCard from '@/components/BlogPostCard.astro';
-import { getCollection } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
+import MainLayout from "@/layouts/MainLayout.astro";
+import BlogPostCard from "@/components/BlogPostCard.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
 const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
     (i: CollectionEntry<"blog">, j: CollectionEntry<"blog">) =>
@@ -12,14 +12,24 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
 
 <MainLayout>
     <div class="flex flex-col flex-nowrap items-center">
-        <div class="w-[33vw] text-4xl font-bold pb-8 underline decoration-fg-accent">Posts</div>
-        {posts.map(post => (
-        <BlogPostCard
-            title={post.data.title}
-            description={post.data.description}
-            date={post.data.date.toLocaleDateString('en-us', {year:"numeric", month:"short", day:"numeric"})}
-            slug={post.slug}
-        />
-        ))}
+        <div
+            class="w-[33vw] text-4xl font-bold pb-8 underline decoration-fg-accent"
+        >
+            Posts
+        </div>
+        {
+            posts.map((post) => (
+                <BlogPostCard
+                    title={post.data.title}
+                    description={post.data.description}
+                    date={post.data.date.toLocaleDateString("en-us", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                    })}
+                    slug={post.slug}
+                />
+            ))
+        }
     </div>
 </MainLayout>
