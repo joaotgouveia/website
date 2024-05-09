@@ -17,19 +17,6 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
         >
             Posts
         </div>
-        {
-            posts.map((post) => (
-                <BlogPostCard
-                    title={post.data.title}
-                    description={post.data.description}
-                    date={post.data.date.toLocaleDateString("en-us", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                    })}
-                    slug={post.slug}
-                />
-            ))
-        }
+        {posts.map((post) => <BlogPostCard post={post} />)}
     </div>
 </MainLayout>
