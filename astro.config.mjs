@@ -6,7 +6,7 @@ export default defineConfig({
     integrations: [tailwind({ applyBaseStyles: false })],
     markdown: {
     shikiConfig: {
-      theme: 'tokyo-night',
+        theme: 'dracula',
         transformers: [transformerNotationHighlight()],
     },
   },
