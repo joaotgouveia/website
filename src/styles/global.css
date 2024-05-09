@@ -35,17 +35,9 @@
         @apply tracking-wide text-xl p-5 my-2 leading-relaxed rounded-xl overflow-x-auto;
     }
 
-    pre [data-line] {
-        @apply px-5;
-    }
-
     figcaption {
         @apply tracking-wide text-xl pt-2 text-fg-dimmed;
     }
-}
-
-.line {
-    @apply border-l-4 border-transparent;
 }
 
 .highlighted {
