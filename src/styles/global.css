@@ -16,11 +16,11 @@
     }
 
     h2 {
-        @apply tracking-wide text-3xl py-2 leading-loose font-bold ;
+        @apply tracking-wide text-3xl leading-relaxed font-bold pb-6;
     }
 
     p {
-        @apply tracking-wide text-xl py-2 leading-loose;
+        @apply tracking-wide text-xl pb-6 leading-relaxed;
     }
 
     p > a {
@@ -32,11 +32,7 @@
     }
 
     pre {
-        @apply tracking-wide text-xl p-5 my-2 leading-relaxed rounded-xl overflow-x-auto;
-    }
-
-    figcaption {
-        @apply tracking-wide text-xl pt-2 text-fg-dimmed;
+        @apply tracking-wide text-xl px-5 py-3 mt-5 mb-7 leading-relaxed rounded-xl overflow-x-auto;
     }
 }
 
