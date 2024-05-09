@@ -16,14 +16,14 @@ const formattedDate = post.data.date.toLocaleDateString("en-us", {
 <div class="w-[33vw] pb-8">
     <a href={`/blog/${post.slug}`} class="card no-underline text-inherit">
         <div class="text-base text-fg-dimmed">{formattedDate}</div>
-        <div class="text-xl font-bold py-1.5 underline decoration-fg-accent">
+        <div class="tracking-wide text-xl font-bold py-1 underline decoration-fg-accent">
             {post.data.title}
         </div>
-        <div class="text-lg py-1.5 transition-colors">
+        <div class="tracking-wide leading-relaxed text-lg py-1 transition-colors">
             {post.data.description}
         </div>
         <div
-            class="card-read-more text-base font-bold transition-colors py-1.5"
+            class="card-read-more text-base font-bold transition-colors py-1"
         >
             Read more <span class="material-symbols-outlined align-middle">read_more</span>
         </div>
