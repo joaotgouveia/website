@@ -1,17 +1,57 @@
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --bg-primary: #131313;
+  --bg-highlighted: rgba(200,200,255,.1);
   --fg-primary: #EEEEEE;
   --fg-accent: #0CF574;
   --fg-dimmed: #696969;
 }
 
-nav {
-    backdrop-filter: blur(20px);
+@layer base {
+    nav {
+        @apply backdrop-blur-lg;
+    }
+
+    h2 {
+        @apply tracking-wide text-3xl py-2 leading-loose font-bold ;
+    }
+
+    p {
+        @apply tracking-wide text-xl py-2 leading-loose;
+    }
+
+    p > a {
+        @apply underline decoration-fg-accent transition-colors;
+    }
+
+    p > a:hover {
+        @apply text-fg-accent;
+    }
+
+    pre {
+        @apply tracking-wide text-xl p-5 my-2 leading-relaxed rounded-xl overflow-x-auto;
+    }
+
+    pre [data-line] {
+        @apply px-5;
+    }
+
+    figcaption {
+        @apply tracking-wide text-xl pt-2 text-fg-dimmed;
+    }
+}
+
+.line {
+    @apply border-l-4 border-transparent;
+}
+
+.highlighted {
+    @apply inline-block w-full bg-bg-highlighted;
 }
 
 .card:hover > .card-read-more {
-    color: var(--fg-accent);
+    @apply text-fg-accent;
 }

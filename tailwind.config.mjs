@@ -8,9 +8,11 @@ export default {
         extend: {
            fontFamily: {
                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+               mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
            },
            colors: {
                "bg-primary": "var(--bg-primary)",
+               "bg-highlighted": "var(--bg-highlighted)",
                "fg-primary": "var(--fg-primary)",
                "fg-accent": "var(--fg-accent)",
                "fg-dimmed": "var(--fg-dimmed)",
