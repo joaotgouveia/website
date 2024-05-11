@@ -16,7 +16,7 @@
     }
 
     h2, h1 {
-        @apply tracking-wide text-3xl leading-relaxed font-bold pb-4;
+        @apply tracking-wide text-2xl leading-relaxed font-bold pb-4;
     }
 
     p {
