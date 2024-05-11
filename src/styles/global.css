@@ -31,6 +31,10 @@
         @apply text-fg-accent;
     }
 
+    p > img {
+        @apply block mx-[auto] pb-6 pt-10;
+    }
+
     pre {
         @apply tracking-wide text-xl px-5 py-3 mt-5 mb-7 leading-relaxed rounded-xl overflow-x-auto;
     }
