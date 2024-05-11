@@ -15,19 +15,19 @@
         @apply backdrop-blur-lg;
     }
 
-    h2 {
-        @apply tracking-wide text-3xl leading-relaxed font-bold pb-6;
+    h2, h1 {
+        @apply tracking-wide text-3xl leading-relaxed font-bold pb-4;
     }
 
     p {
-        @apply tracking-wide text-xl pb-6 leading-relaxed;
+        @apply tracking-wide text-xl pb-4 leading-relaxed;
     }
 
-    p > a {
+    p > a:not(.reference), em > a:not(.reference) {
         @apply underline decoration-fg-accent transition-colors;
     }
 
-    p > a:hover {
+    p > a:not(.reference):hover, em > a:hover {
         @apply text-fg-accent;
     }
 
