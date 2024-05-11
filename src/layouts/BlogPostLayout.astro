@@ -2,6 +2,7 @@
 import type { MarkdownLayoutProps } from "astro";
 
 type Props = MarkdownLayoutProps<{
+    author: string;
     title: string;
     description: string;
     date: string;
@@ -9,9 +10,18 @@ type Props = MarkdownLayoutProps<{
 }>;
 
 const { frontmatter } = Astro.props;
+const date = new Date(frontmatter.date);
+const formattedDate = date.toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+});
 ---
 
 <div class="w-1/2">
-    <div class="text-center tracking-wide text-4xl font-bold">{frontmatter.title}</div>
+    <div class="tracking-wide text-xl leading-relaxed text-fg-dimmed">
+        {frontmatter.author}, {formattedDate}
+    </div>
+    <div class="tracking-wide text-4xl font-bold underline decoration-fg-accent pb-10">{frontmatter.title}</div>
     <slot />
 </div>
