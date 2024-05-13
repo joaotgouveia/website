@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import Navbar from "@/components/Navbar.astro";
+import Footer from "@/components/Footer.astro";
 ---
 
 <html lang="en">
@@ -17,10 +18,11 @@ import Navbar from "@/components/Navbar.astro";
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <title>joaotgouveia</title>
     </head>
-    <body class="bg-bg-primary text-fg-primary font-sans">
+    <body class="relative min-h-screen bg-bg-primary text-fg-primary font-sans">
         <Navbar />
-        <div class="mt-24">
+        <div class="pt-24 pb-14">
             <slot />
         </div>
+        <Footer />
     </body>
 </html>
