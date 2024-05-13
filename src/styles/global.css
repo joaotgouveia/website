@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #131313;
-  --bg-highlighted: rgba(200,200,255,.1);
-  --fg-primary: #EEEEEE;
-  --fg-accent: #0CF574;
-  --fg-dimmed: #696969;
+    --bg-primary: #131313;
+    --bg-highlighted: rgba(200,200,255,.1);
+    --fg-primary: #EEEEEE;
+    --fg-accent: #0CF574;
+    --fg-dimmed: #696969;
 }
 
 @layer base {
@@ -24,7 +24,7 @@
     }
 
     p > a:not(.reference), em > a:not(.reference) {
-        @apply underline decoration-fg-accent transition-colors;
+        @apply underline decoration-fg-accent transition-colors break-words;
     }
 
     p > a:not(.reference):hover, em > a:hover {
