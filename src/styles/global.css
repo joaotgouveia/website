@@ -24,7 +24,7 @@
     }
 
     p > a:not(.reference), em > a:not(.reference) {
-        @apply underline decoration-fg-accent transition-colors;
+        @apply underline decoration-fg-accent transition-colors break-words;
     }
 
     p > a:not(.reference):hover, em > a:hover {
