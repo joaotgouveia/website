@@ -32,7 +32,7 @@
     }
 
     p > img {
-        @apply block mx-[auto] pb-6 pt-10;
+        @apply block mx-[auto] py-4;
     }
 
     pre {
