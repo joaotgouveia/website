@@ -18,11 +18,11 @@ const formattedDate = date.toLocaleDateString("en-us", {
 });
 ---
 
-<div class="w-2/3">
-    <div class="tracking-wide text-xl leading-relaxed text-fg-dimmed">
+<div class="lg:w-2/3 w-11/12">
+    <div class="lg:text-xl text-base tracking-wide leading-relaxed text-fg-dimmed">
         {frontmatter.author} - {formattedDate}
     </div>
-    <div class="tracking-wide text-4xl font-bold underline decoration-fg-accent pb-7">{frontmatter.title}</div>
+    <div class="lg:text-4xl text-2xl lg:pb-7 pb-4 tracking-wide font-bold underline decoration-fg-accent">{frontmatter.title}</div>
     <p>{frontmatter.description}</p>
     <slot />
 </div>
