@@ -16,11 +16,11 @@
     }
 
     h2, h1 {
-        @apply tracking-wide text-2xl leading-relaxed font-bold pb-4;
+        @apply tracking-wide lg:text-2xl text-lg leading-relaxed pb-4 font-bold;
     }
 
     p {
-        @apply tracking-wide text-xl pb-4 leading-relaxed;
+        @apply tracking-wide lg:text-xl text-base leading-relaxed pb-4;
     }
 
     p > a:not(.reference), em > a:not(.reference) {
@@ -36,7 +36,7 @@
     }
 
     pre {
-        @apply tracking-wide text-xl px-5 py-3 mt-5 mb-7 leading-relaxed rounded-xl overflow-x-auto;
+        @apply tracking-wide lg:text-xl text-base px-5 py-3 mt-5 mb-7 leading-relaxed rounded-xl overflow-x-auto;
     }
 }
 
