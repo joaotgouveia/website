@@ -16,6 +16,7 @@ export default {
                "fg-primary": "var(--fg-primary)",
                "fg-accent": "var(--fg-accent)",
                "fg-dimmed": "var(--fg-dimmed)",
+               "tag": "var(--tag)",
            },
         },
     },

@@ -8,6 +8,7 @@
     --fg-primary: #EEEEEE;
     --fg-accent: #0CF574;
     --fg-dimmed: #696969;
+    --tag: #0c8cf4;
 }
 
 @layer base {
@@ -44,6 +45,6 @@
     @apply inline-block w-full bg-bg-highlighted;
 }
 
-.card:hover > .card-read-more {
+.card:hover ~ a > .card-read-more {
     @apply text-fg-accent;
 }

@@ -1,0 +1,16 @@
+---
+interface Props {
+    tag: string;
+}
+
+const { tag } = Astro.props;
+const slugifiedTag = tag.toLowerCase().replaceAll(" ", "-");
+---
+
+<a href={`/tags/${slugifiedTag}`}>
+    <span
+        class="transition-colors px-2 py-1 font-bold lg:text-base text-sm  rounded-full border-2 hover:border-fg-accent border-tag"
+    >
+        {tag}
+    </span>
+</a>
