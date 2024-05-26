@@ -6,7 +6,7 @@ description: |
   Over the course of this summer I'll be contributing to KDE,
   implementing an opponent for the Mancala variant Bohnenspiel.
 date: 2024-05-13
-tags: [GSoC, Artificial Intelligence]
+tags: [KDE, GSoC, Artificial Intelligence]
 ---
 
 # The Motivation

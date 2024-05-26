@@ -1,5 +1,9 @@
 ---
+interface Props {
+    rssFeed: string;
+}
 
+const { rssFeed } = Astro.props;
 ---
 
 <footer
@@ -7,11 +11,7 @@
 >
     <div class="lg:w-2/3 w-11/12 m-0">
         <span class="text-fg-dimmed lg:text-sm text-xs font-bold">© 2020-present, João Gouveia.</span>
-        <a
-            href="https://www.github.com/joaotgouveia"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <a href=`${rssFeed}`>
             <span class="material-symbols-outlined align-middle float-right">rss_feed</span>
         </a>
     </div>
