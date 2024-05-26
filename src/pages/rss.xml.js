@@ -21,6 +21,7 @@ export async function GET(context) {
     }
 
     return rss({
+        stylesheet: '/rss/styles.xsl',
         title: 'joaotgouveia',
         description: 'My personal blog',
         site: context.site,

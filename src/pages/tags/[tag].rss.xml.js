@@ -39,6 +39,7 @@ export async function GET(context) {
     }
 
     return rss({
+        stylesheet: '/rss/styles.xsl',
         title: `joaotgouveia's ${params.tag} posts`,
         description: `My blog posts tagged with ${params.tag}`,
         site: context.site,
