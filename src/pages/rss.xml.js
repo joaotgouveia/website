@@ -16,7 +16,9 @@ export async function GET(context) {
             author: post.frontmatter.author,
             pubDate: post.frontmatter.date,
             categories: post.frontmatter.tags,
-            content: sanitizeHtml(post.compiledContent()),
+            content: sanitizeHtml(post.compiledContent(), {
+                allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
+            }),
         });
     }
 
