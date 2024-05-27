@@ -16,7 +16,7 @@
         @apply backdrop-blur-lg;
     }
 
-    h2, h1 {
+    h2 {
         @apply tracking-wide lg:text-2xl text-lg leading-relaxed pb-4 font-bold;
     }
 

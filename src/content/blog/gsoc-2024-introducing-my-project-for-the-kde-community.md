@@ -6,10 +6,10 @@ description: |
   Over the course of this summer I'll be contributing to KDE,
   implementing an opponent for the Mancala variant Bohnenspiel.
 date: 2024-05-13
-tags: [GSoC, Artificial Intelligence]
+tags: [KDE, GSoC, Artificial Intelligence]
 ---
 
-# The Motivation
+## The Motivation
 
 Why implement a computerized opponent for a Mancala variant?
 
@@ -17,7 +17,7 @@ Games within the Mancala family are played all over the world. However,
 as of now, KDE doesn't offer any Mancala games to people looking for a
 challenging opponent.
 
-# Considerations
+## Considerations
 
 There are two core aspects to have in mind.
 
@@ -33,7 +33,7 @@ implementations of Mancala variants. This accelerates the process of
 implementing a new Mancala variant and it's opponent, as all the core
 algorithms are readily available for their use.
 
-# The Game
+## The Game
 
 Bohnenspiel is played on a board with 2 rows, each with 6 holes, and 2
 end-holes, called stores. Each player owns the store to their right hand
@@ -60,7 +60,7 @@ The game ends when a player cannot move anymore; the remaining seeds on
 the board are given to the opposing player, and the winner is the one
 with more seeds [\[1\]](#citeproc_bib_item_1).
 
-# The Algorithm
+## The Algorithm
 
 The final engine will use the MTD(f) Minimax Search algorithm with
 iterative-deepening. Optimizations like move ordering may be
@@ -70,7 +70,7 @@ MTD(f) was previously used to solve Kalah [\[2\]](#citeproc_bib_item_2),
 another Mancala game, and consistently outperformed other algorithms in
 a variety of board games [\[3\]](#citeproc_bib_item_3).
 
-# Closing Remarks
+## Closing Remarks
 
 This project not only aims to introduce a new game into KDE\'s
 repertoire, but also to lay the groundwork for future additions to the
@@ -83,7 +83,7 @@ interested developers to engage with this project, suggest improvements,
 and contribute to the development of an opponent for one of the most
 popular and oldest board games in the world.
 
-# References
+## References
 
 <a name="citeproc_bib_item_1" class="reference">1.</a> "Bohnenspiel : igGameCenter."
 <https://www.iggamecenter.com/en/rules/bohnenspiel>.
