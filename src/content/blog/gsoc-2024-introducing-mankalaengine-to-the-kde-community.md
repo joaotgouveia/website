@@ -1,11 +1,11 @@
 ---
 layout: "@/layouts/BlogPostLayout.astro"
 author: "João Gouveia"
-title: "GSoC 2024: Introducing My Project For The KDE Community"
+title: "GSoC 2024: Introducing MankalaEngine To The KDE Community"
 description: |
   Over the course of this summer I'll be contributing to KDE,
   implementing an opponent for the Mancala variant Bohnenspiel.
-date: 2024-05-13
+date: 2024-05-31
 tags: [KDE, GSoC, Artificial Intelligence]
 ---
 
@@ -82,6 +82,8 @@ fostering community feedback. I invite the KDE community and all
 interested developers to engage with this project, suggest improvements,
 and contribute to the development of an opponent for one of the most
 popular and oldest board games in the world.
+
+Development will take place in [KDE Invent](https://invent.kde.org/joaotgouveia/mankalaengine).
 
 ## References
 
