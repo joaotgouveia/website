@@ -47,6 +47,52 @@ functions that can be used to select moves for Mancala games. In addition to
 Minimax and MTDF-f [\[2\]](#citeproc_bib_item_2), random selection and user
 selection functions are also provided.
 
+## The Minimax move selection function
+
+Minimax works by recursively exploring the game tree, considering each player's
+moves and assuming that each player chooses the optimal move to maximize their
+chances of winning. If we're scoring a Mancala position using an evaluation
+function that subtracts the pebbles in Player 2's store from the pebbles in
+Player 1's store, this means that Player 1 will want to maximize the score, while
+Player 2 will want to minimize it. The diagram below shows how a position is
+evaluated using the Minimax algorithm.
+
+![Minimax Diagram](@/images/minimax.svg)
+
+Each node represents a specific board configuration, and each level of the tree
+represents a turn of play. The tree nodes are squares on Player 1's turn and
+circles on Player 2's turn. Leaf nodes (nodes without children) are scored
+using the evaluation function. The rest of the nodes are scored by selecting
+the best score out of their children nodes - highest score if it's Player 1's
+turn and lowest score if it's Player 2's turn.
+
+## The MTD-f move selection function
+
+MTD-f works by repeatedly calling Minimax until it converges to a value. The
+Minimax used by MTD-f is implemented using alpha-beta pruning, which is a
+technique used to reduce the number of nodes evaluated in the tree by eliminating
+branches that are guaranteed to be worse than previously examined branches.
+
+Since MTD-f calls Minimax several times, it's also important to use a
+transposition table, which is a data structure that stores previously evaluated
+positions and their scores.
+
+Below is Aske Plaat's pseudo-code for the algorithm.
+
+```
+function MTDF(root : node_type; f : integer; d : integer) : integer;
+
+   g := f;
+   upperbound := +INFINITY;
+   lowerbound := -INFINITY;
+   repeat
+       if g == lowerbound then beta := g + 1 else beta := g;
+       g := Minimax(root, beta - 1, beta, d);
+       if g < beta then upperbound := g else lowerbound := g;
+   until lowerbound >= upperbound;
+   return g;
+```
+
 ## The `MankalaEngine` class
 
 The `MankalaEngine` class ties everything together. When instatiating it, you'll
