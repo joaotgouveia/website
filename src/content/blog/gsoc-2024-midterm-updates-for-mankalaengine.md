@@ -44,8 +44,8 @@ seems to be relatively common in Mancala variants.
 
 The functions provided in the `moveselection` file are general adversarial search
 functions that can be used to select moves for Mancala games. In addition to
-Minimax and MTDF-f [\[2\]](#citeproc_bib_item_2), random selection and user
-selection functions are also provided.
+Minimax [\[2\]](#citeproc_bib_item_2) and MTDF-f [\[3\]](#citeproc_bib_item_3),
+random selection and user selection functions are also provided.
 
 ## The Minimax move selection function
 
@@ -66,6 +66,11 @@ using the evaluation function. The rest of the nodes are scored by selecting
 the best score out of their children nodes - highest score if it's Player 1's
 turn and lowest score if it's Player 2's turn.
 
+A great explanation of Minimax and Alpha-beta prunning, a common optimization
+for Minimax implementations that's also used in this library, can be found in
+Sebastian Lague's [Youtube video](https://youtu.be/l-hh51ncgDI?si=pL81nM6I8W_A2oW-)
+about this algorithm.
+
 ## The MTD-f move selection function
 
 MTD-f works by repeatedly calling Minimax until it converges to a value. The
@@ -79,7 +84,7 @@ positions and their scores.
 
 Below is Aske Plaat's pseudo-code for the algorithm.
 
-```
+```pascal
 function MTDF(root : node_type; f : integer; d : integer) : integer;
 
    g := f;
@@ -138,5 +143,8 @@ on [Matrix](https://matrix.to/#/#mancala:kde.org).
 <a name="citeproc_bib_item_1" class="reference">1.</a> "Das Bohnenspiel", <i>Wikipedia</i>, 2023.
 <https://en.wikipedia.org/wiki/Das_Bohnenspiel>.
 
-<a name="citeproc_bib_item_2" class="reference">2.</a> "Aske Plaat: MTD(f), a new chess algorithm."
+<a name="citeproc_bib_item_2" class="reference">2.</a> "Algorithms - Minimax"
+<https://cs.stanford.edu/people/eroberts/courses/soco/projects/2003-04/intelligent-search/minimax.html>.
+
+<a name="citeproc_bib_item_3" class="reference">3.</a> "Aske Plaat: MTD(f), a new chess algorithm."
 <https://people.csail.mit.edu/plaat/mtdf.html>.
