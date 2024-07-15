@@ -103,7 +103,7 @@ function MTDF(root : node_type; f : integer; d : integer) : integer;
 
 The static evaluation function used in this library consists of subtracting the
 pebbles in Player 2's store from the pebbles in Player 1's store. This is the
-same function that was used when solving the mancala variant _Kalah_
+same function that was used when solving the Mancala variant _Kalah_
 [\[4\]](#citeproc_bib_item_4).
 
 This way of scoring Mancala positions is particulary suitable for MTD-f, since,
