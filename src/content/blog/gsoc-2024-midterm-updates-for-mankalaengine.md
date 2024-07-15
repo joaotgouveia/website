@@ -13,22 +13,22 @@ tags: [KDE, GSoC, Artificial Intelligence]
 ## Design Considerations
 
 One of the main focuses while designing this engine was flexibility, to ensure
-the library is usable for almost all Mancala variants. While certain abstractions
-are necessary to achieve this goal, it's also important not to overly abstract
-the library.
+the library is usable for a wide variety of Mancala variants. While certain
+abstractions are necessary to achieve this goal, it's also important not to overly
+abstract the library.
 
 ## Provided Functionality
 
 MankalaEngine provides classes to assist in creating computerized opponents for
-any Mancala variant. As mentioned earlier, these classes are designed with a
+many Mancala variants. As mentioned earlier, these classes are designed with a
 degree of abstraction to allow for greater flexibility on the developer's end. In
 addition to these base classes, a concrete implementation tailored for the
 Bohnenspiel [\[1\]](#citeproc_bib_item_1) variant is also provided.
 
 ## The `Board` struct
 
-The `board` struct is the base struct for any Mancala variant's board. It is used
-to specify the structure of the board used by a variant. As of now, this struct
+The `board` struct is the base struct for a Mancala game board. It is used to
+specify the structure of the board used by a variant. As of now, this struct
 allows for a board with an arbitrary number of holes and two stores, one per
 player, as this seems to be the case for most Mancala games.
 
@@ -66,17 +66,18 @@ using the evaluation function. The rest of the nodes are scored by selecting
 the best score out of their children nodes - highest score if it's Player 1's
 turn and lowest score if it's Player 2's turn.
 
-A great explanation of Minimax and Alpha-beta prunning, a common optimization
-for Minimax implementations that's also used in this library, can be found in
-Sebastian Lague's [Youtube video](https://youtu.be/l-hh51ncgDI?si=pL81nM6I8W_A2oW-)
-about this algorithm.
+The Minimax implementation in the library also uses alpha-beta pruning, a
+technique used to reduce the number of nodes evaluated in the tree by eliminating
+branches that are guaranteed to be worse than previously examined branches.
+
+A great explanation of Minimax and Alpha-beta prunning can be found in Sebastian
+Lague's [Youtube video](https://youtu.be/l-hh51ncgDI?si=pL81nM6I8W_A2oW-) about
+this algorithm.
 
 ## The MTD-f move selection function
 
 MTD-f works by repeatedly calling Minimax until it converges to a value. The
-Minimax used by MTD-f is implemented using alpha-beta pruning, which is a
-technique used to reduce the number of nodes evaluated in the tree by eliminating
-branches that are guaranteed to be worse than previously examined branches.
+Minimax used by MTD-f is implemented using alpha-beta pruning.
 
 Since MTD-f calls Minimax several times, it's also important to use a
 transposition table, which is a data structure that stores previously evaluated
@@ -129,6 +130,10 @@ themselves. Additionally, adding the option to choose the difficulty of an
 opponent is also relevant. This may be implemented, for example, by allowing
 changes to the cutoff depth for the Minimax and MTD-f opponents, which is not
 currently supported.
+
+As of now, the implemented Minimax only uses alpha-beta prunning and
+transposition tables. Adding more optimizations, such as move ordering, per
+example, might also be of interest.
 
 Another possible route is developing a Qt application for playing Mancala that
 uses this engine. This would likely help generate interest in the project within
