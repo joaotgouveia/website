@@ -99,6 +99,21 @@ function MTDF(root : node_type; f : integer; d : integer) : integer;
    return g;
 ```
 
+## Evaluating Mancala positions
+
+The static evaluation function used in this library consists of subtracting the
+pebbles in Player 2's store from the pebbles in Player 1's store. This is the
+same function that was used when solving the mancala variant _Kalah_
+[\[4\]](#citeproc_bib_item_4).
+
+This way of scoring Mancala positions is particulary suitable for MTD-f, since,
+according to Plaat, the static evaluation function used should be coarse-grained,
+meaning that we should avoid using heuristics with little weight. As he says in
+his post about MTD(f), _"The coarser the grain of eval, the less passes MTD(f)
+has to make to converge to the minimax value. Some programs have a fine grained
+evaluation function, where positional knowledge can be worth as little as one
+hundredst of a pawn."_ [\[3\]](#citeproc_bib_item_3).
+
 ## The `MankalaEngine` class
 
 The `MankalaEngine` class ties everything together. When instatiating it, you'll
@@ -153,3 +168,7 @@ on [Matrix](https://matrix.to/#/#mancala:kde.org).
 
 <a name="citeproc_bib_item_3" class="reference">3.</a> "Aske Plaat: MTD(f), a new chess algorithm."
 <https://people.csail.mit.edu/plaat/mtdf.html>.
+
+<a name="citeproc_bib_item_4" class="reference">4.</a> G. Irving, J. Donkers, and J. Uiterwijk,
+"Solving Kalah", <i>Icga journal</i>, vol. 23, no. 3, pp. 139–147, Sep. 2000,
+doi: <a href="https://doi.org/10.3233/ICG-2000-23303">10.3233/ICG-2000-23303</a>.
