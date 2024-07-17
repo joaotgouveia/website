@@ -23,7 +23,7 @@ MankalaEngine provides classes to assist in creating computerized opponents for
 many Mancala variants. As mentioned earlier, these classes are designed with a
 degree of abstraction to allow for greater flexibility on the developer's end. In
 addition to these base classes, a concrete implementation tailored for the
-Bohnenspiel [\[1\]](#citeproc_bib_item_1) variant is also provided.
+Bohnenspiel variant [\[1\]](#citeproc_bib_item_1) is also provided.
 
 ## The `Board` struct
 
