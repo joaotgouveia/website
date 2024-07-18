@@ -6,7 +6,7 @@ description: |
     Over the past few weeks, I've made significant progress in developing
     MankalaEngine. While there's still room for improvement, I've now created
     a library that enables the creation of opponents in Mancala games.
-date: 2024-07-17
+date: 2024-07-18
 tags: [KDE, GSoC, Artificial Intelligence]
 ---
 
