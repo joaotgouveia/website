@@ -6,7 +6,7 @@ description: |
     Since the midterm update on MankalaEngine, I've improved the library,
     particularly its building and testing processes. I've also prepared a
     repository for a graphical Mancala game and started learning Qt.
-date: 2024-08-16
+date: 2024-08-18
 tags: [KDE, GSoC]
 ---
 
