@@ -6,7 +6,7 @@ description: |
     I am now reaching the end of my GSoC period. Contributing to KDE has been a
     great learning experience, one that I intend to continue beyond this
     project.
-date: 2024-08-22
+date: 2024-08-23
 tags: [KDE, GSoC]
 ---
 
