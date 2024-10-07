@@ -13,7 +13,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/tailwind": "^5.1.1",
-    "astro": "^4.15.9",
+    "astro": "^4.15.12",
     "node-html-parser": "^6.1.13",
     "sanitize-html": "^2.13.1",
     "sharp": "^0.33.5",
