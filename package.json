@@ -21,7 +21,7 @@
     "typescript": "^5.8.2"
   },
   "devDependencies": {
-    "@shikijs/transformers": "^3.2.2",
+    "@shikijs/transformers": "^3.3.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1"
   }
